@@ -288,7 +288,11 @@ async function bootScramjet() {
 
   const wispUrl = `${location.protocol === "https:" ? "wss" : "ws"}://${location.host}/wisp/`;
   const selected = prefs().proxy;
-  const modulePath = selected === "epoxy" ? "/epoxy/index.mjs" : "/libcurl/index.mjs";
+  
+const modulePath = selected === "epoxy"
+    ? "/flamelearning/epoxy-public/index.mjs"
+    : "/flamelearning/libcurl-public/index.mjs";
+  
   const { default: Transport } = await import(modulePath);
   const transport = new Transport({wisp: wispUrl});
 
