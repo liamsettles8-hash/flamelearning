@@ -274,7 +274,9 @@ function toggleSettings(force) {
 async function bootScramjet() {
   if (!("serviceWorker" in navigator)) throw new Error("This browser does not support service workers.");
 
-  const registration = await navigator.serviceWorker.register("/sw.js", {scope:"/"});
+  const registration = await navigator.serviceWorker.register("/flamelearning/sw.js", {
+    scope: "/flamelearning/"
+});
   await navigator.serviceWorker.ready;
 
   const worker = navigator.serviceWorker.controller || registration.active;
