@@ -302,9 +302,9 @@ const modulePath = selected === "epoxy"
     transport,
     config: {
       prefix: "/~/sj/",
-      scramjetPath: "/scram/scramjet.js",
-      injectPath: "/controller/controller.inject.js",
-      wasmPath: "/scram/scramjet.wasm",
+scramjetPath: "/flamelearning/scram-public/scramjet.js",
+injectPath: "/flamelearning/controller-public/controller.inject.js",
+wasmPath: "/flamelearning/scram-public/scramjet.wasm",
       virtualWasmPath: "scramjet.wasm.js"
     },
     scramjetConfig: {
